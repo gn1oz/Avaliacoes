@@ -40,7 +40,7 @@ function cadastroPacientes(){
 
   // A função termina aqui //
 
-// Esse códgio é uma máscara para após 3 digitos do CPF colocar um ., depois de outros 3 outro . e no final um - //
+// Esse código é uma máscara para após 3 digitos do CPF colocar um ., depois de outros 3 outro . e no final um - //
 
 const cpf = document.querySelector('#cpf_cad');
 
@@ -53,10 +53,24 @@ cpf.addEventListener('keypress', () => {
     else if (inputlenght == 11){
         cpf.value += '-'
     }
-    
+
 })
 
 // Acaba aqui a máscara de CPF //
+
+// Verifica se o CPF já foi inserido //
+
+for(let cpf_validate of JSON.parse(localStorage.getItem("dadosPacientes"))){
+  if(cpf_validate.CPF == cpf.value){
+      alert("CPF já cadastrado!")
+        document.getElementById("#cpf_cad").value = "";
+    }
+    else{
+        cadastroPacientes();
+    }
+}
+
+// Fim da verificação //
 
 // Já essa máscara, serve para colocar / para separar a data de nascimento, com dia, mês e ano //
 
