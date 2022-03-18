@@ -1,0 +1,111 @@
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Clínica ACME</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    </head>
+
+<style>
+
+    .form-control {
+      margin-top: 15px;
+        margin-left: 37.5%;
+    }
+    label{
+      margin-left: 37.5%;
+    }
+    .localStorage{
+      width: 10%;
+      margin-top: 5px;
+      background-color: #0d6efd;
+      border: none;
+      border-radius: 0.3rem;
+      padding: 8px 16px;
+    }
+    .localStorage:hover{
+      background-color: #0b5ed7;
+    }
+    .sexstt{
+      margin-top: -1%;
+    }
+
+</style>
+
+<body class="text-center">
+ 
+<!-- Formulário de Cadastro -->
+
+  <form name="cadastro">
+
+<h1> Cadastro de Pacientes </h1>
+
+    <div class="form-floating">
+
+      <input class="w-25 form-control" id="nome_cad" required="required" type="text"/>
+      <label for="nome_cad">Nome*</label>
+      
+    </div>
+
+    <div class="form-floating">
+
+      <input class="w-25 form-control" id="nasc_cad" required="required" type="text" maxlength="10" onkeypress="return event.charCode >= 48 && event.charCode <= 57"/> 
+      <label for="nasc_cad">Data de Nascimento*</label>
+      
+    </div>
+
+    <div class="form-floating float-center">
+
+      <input class="w-25 form-control" id="cpf_cad" required="required" type="text" maxlength="14" autocomplete="off" onkeypress="return event.charCode >= 48 && event.charCode <= 57"/>
+      <label for="cpf_cad">CPF*</label>
+      
+    </div>
+
+    <br>
+
+    <div class="form-floating">
+
+        <select name="select">
+          <option disabled selected hidden> </option>
+          <option id="sex_cad" required="required" name="sexo" value="M">Masculino</option>
+          <option id="sex_cad" required="required" name="sexo" value="F">Feminino</option>
+        </select>
+      <label class="sexstt" for="sex_cad">Sexo*</label>
+
+    </div>
+
+    <div class="form-floating">
+
+      <input class="w-25 form-control" id="end_cad" type="text"/>
+      <label for="end_cad">Endereço</label>
+      
+    </div>
+
+    <br>
+
+    <div class="form-floating">
+
+      <select required="required" name="select">
+        <option disabled selected hidden> </option>
+        <option id="stat_cad" name="stat_cad" value="Ativo">Ativo</option>
+        <option id="stat_cad" name="stat_cad" value="Inativo">Inativo</option>
+      </select>
+      <label class="sexstt" for="stat_cad">Status*</label>
+      
+    </div>
+
+    <br>
+
+    <button class="w-25 btn btn-lg btn-primary" type="button" onclick="cadastroPacientes()">Cadastrar</button>
+
+    <p class="mt-5 mb-3 text-muted">&copy; ACME - <a style="text-decoration: none;" href="https://www.linkedin.com/in/gabriel-maia-23b04319b/">Gabriel Maia</a> - 2022</p>
+
+  </form>
+
+  <!-- Fim do Formulário de Cadastro -->
+
+</body>
+
+<script src="./main.js"> </script>
+
+</html>
