@@ -66,10 +66,9 @@
 
     <div class="form-floating">
 
-        <select name="select">
-          <option disabled selected hidden> </option>
-          <option id="sex_cad" required="required" name="sexo" value="M">Masculino</option>
-          <option id="sex_cad" required="required" name="sexo" value="F">Feminino</option>
+        <select id="sex_cad" name="select">
+          <option selected name="sexo" value="M">Masculino</option>
+          <option name="sexo" value="F">Feminino</option>
         </select>
       <label class="sexstt" for="sex_cad">Sexo*</label>
 
@@ -86,10 +85,9 @@
 
     <div class="form-floating">
 
-      <select required="required" name="select">
-        <option disabled selected hidden> </option>
-        <option id="stat_cad" name="stat_cad" value="Ativo">Ativo</option>
-        <option id="stat_cad" name="stat_cad" value="Inativo">Inativo</option>
+      <select id="stat_cad" required="required" name="select">
+        <option selected name="stat_cad" value="Ativo">Ativo</option>
+        <option name="stat_cad" value="Inativo">Inativo</option>
       </select>
       <label class="sexstt" for="stat_cad">Status*</label>
       
